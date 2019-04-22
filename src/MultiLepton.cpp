@@ -65,7 +65,7 @@ MultiLepton::~MultiLepton(){
 
 }
 
-void MultiLepton::FillParticle(string Type, Particle &p){
+void MultiLepton::FillParticle(string Type, memMultilepton::Particle &p){
 
   if (Type=="lepton") Leptons.push_back(p);
   if (Type=="jet") Jets.push_back(p);
@@ -83,7 +83,7 @@ void MultiLepton::FillParticle(string Type, Particle &p){
 
 void MultiLepton::FillParticle(string Type, int id, TLorentzVector p4){
 
-  Particle p;
+  memMultilepton::Particle p;
   p.Id = id;
   p.P4 = p4;
   if (Type=="lepton") Leptons.push_back(p);
@@ -102,7 +102,7 @@ void MultiLepton::FillParticle(string Type, int id, TLorentzVector p4){
 
 void MultiLepton::FillParticle(string Type, int id, TLorentzVector p4, float csv){
 
-  Particle p;
+  memMultilepton::Particle p;
   p.Id = id;
   p.P4 = p4;
   p.CSV = csv;
@@ -122,7 +122,7 @@ void MultiLepton::FillParticle(string Type, int id, TLorentzVector p4, float csv
 
 void MultiLepton::FillParticle(string Type, int id, float csv, float jec_up, float jec_down, float jer_up, float jer_down, TLorentzVector p4){
 
-  Particle p;
+  memMultilepton::Particle p;
   p.Id = id;
   p.P4 = p4;
   p.CSV = csv;
@@ -146,11 +146,11 @@ void MultiLepton::FillParticle(string Type, int id, float csv, float jec_up, flo
 
 void MultiLepton::FillParticleMatched(string Type, float deltaR, int label, int id, TLorentzVector p4){
 
-  Particle 	p;
-  p.DeltaR 	= deltaR;
-  p.Label	= label;
-  p.Id 		= id;
-  p.P4 		= p4;
+  memMultilepton::Particle p;
+  p.DeltaR = deltaR;
+  p.Label  = label;
+  p.Id 	   = id;
+  p.P4 	   = p4;
 
   if (Type=="lepton") 	LeptonsMatched.push_back(p);
   if (Type=="jet") 	BjetsMatched.push_back(p);
@@ -160,33 +160,33 @@ void MultiLepton::FillParticleMatched(string Type, float deltaR, int label, int 
 
 void MultiLepton::FillParticleGen(string Type, int label, int id, TLorentzVector p4){
 
-  Particle      p;
-  p.Label       = label;
-  p.Id          = id;
-  p.P4          = p4;
+  memMultilepton::Particle p;
+  p.Label = label;
+  p.Id    = id;
+  p.P4    = p4;
 
   ParticleGen.push_back(p);
 
   return;
 }
 
-void MultiLepton::DoSort(vector<Particle>* particles)
+void MultiLepton::DoSort(vector<memMultilepton::Particle>* particles)
 {
   std::sort(((*particles).begin()), ((*particles).end()), MultiLepton::ComparePt());
   return;
 }
 
-int MultiLepton::DoPermutation(vector<Particle>* particles)
+int MultiLepton::DoPermutation(vector<memMultilepton::Particle>* particles)
 {
   int res = std::next_permutation(((*particles).begin()), ((*particles).end()), MultiLepton::ComparePt());
   return res;
 }
 
-int MultiLepton::DoPermutationLinear(string Type, vector<Particle>* particles)
+int MultiLepton::DoPermutationLinear(string Type, vector<memMultilepton::Particle>* particles)
 {
   if (verbosity>=1) cout << "doPermutation linear"<<endl; 
   int res = 0;
-  Particle p = (*particles).at(0);
+  memMultilepton::Particle p = (*particles).at(0);
   (*particles).erase((*particles).begin());
   (*particles).push_back(p);
   if (Type=="lepton") {

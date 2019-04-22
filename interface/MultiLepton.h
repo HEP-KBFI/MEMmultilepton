@@ -29,7 +29,8 @@
 #define kJet_Missing 5
 
 
-
+namespace memMultilepton
+{
 struct Particle {
   int   Id;
   int   Label;
@@ -43,7 +44,7 @@ struct Particle {
   float energy_ref;
   TLorentzVector P4;
 };
-
+}
 
 class MultiLepton
 {
@@ -53,17 +54,17 @@ class MultiLepton
 
   int verbosity;
 
-  vector<Particle> Bjets;
-  vector<Particle> BjetsMatched;
-  vector<Particle> Leptons;
-  vector<Particle> LeptonsMatched;
-  vector<Particle> Jets;
-  vector<Particle> AllJets;
-  vector<Particle> JetsHighestPt;
-  vector<Particle> JetsClosestMw;
-  vector<Particle> JetsLowestMjj;
-  vector<Particle> JetsHighestEta;
-  vector<Particle> ParticleGen;
+  vector<memMultilepton::Particle> Bjets;
+  vector<memMultilepton::Particle> BjetsMatched;
+  vector<memMultilepton::Particle> Leptons;
+  vector<memMultilepton::Particle> LeptonsMatched;
+  vector<memMultilepton::Particle> Jets;
+  vector<memMultilepton::Particle> AllJets;
+  vector<memMultilepton::Particle> JetsHighestPt;
+  vector<memMultilepton::Particle> JetsClosestMw;
+  vector<memMultilepton::Particle> JetsLowestMjj;
+  vector<memMultilepton::Particle> JetsHighestEta;
+  vector<memMultilepton::Particle> ParticleGen;
 
   TLorentzVector Ptot;
   TLorentzVector mET;
@@ -97,7 +98,7 @@ class MultiLepton
 
   void SetVerbosity(int);
 
-  void FillParticle(string, Particle&);
+  void FillParticle(string, memMultilepton::Particle&);
   void FillParticle(string, int, TLorentzVector);
   void FillParticle(string, int, TLorentzVector, float);
   void FillParticle(string, int, float, float, float, float, float, TLorentzVector);
@@ -108,9 +109,9 @@ class MultiLepton
   void LoadIntegrationRange(MEPhaseSpace**);
   void FillParticlesHypothesis(int, MEPhaseSpace**);
 
-  void DoSort(vector<Particle>*);
-  int DoPermutation(vector<Particle>*);
-  int DoPermutationLinear(string, vector<Particle>*);
+  void DoSort(vector<memMultilepton::Particle>*);
+  int DoPermutation(vector<memMultilepton::Particle>*);
+  int DoPermutationLinear(string, vector<memMultilepton::Particle>*);
   int CheckPermutationHyp(int);
 
   int DoPermutationMissingJet(string);
@@ -138,7 +139,7 @@ class MultiLepton
   void ReadIntegrationBoundaries(int, MEPhaseSpace**);
 
   struct ComparePt{
-    bool operator() (const Particle& PA, const Particle& PB) const {
+    bool operator() (const memMultilepton::Particle& PA, const memMultilepton::Particle& PB) const {
       return PA.P4.Pt()>PB.P4.Pt();
     }
   };
