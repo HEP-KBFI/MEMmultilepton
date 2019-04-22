@@ -1,0 +1,7 @@
+<bin file="SimpleMEManalyzer.cpp" name="simpleMEManalyzer">
+  <use   name="tthAnalysis/MEMmultilepton"/>
+  <use   name="root"/>
+  <use   name="lhapdf"/>
+  <Flags CXXFLAGS="-g"/>
+</bin>
+
