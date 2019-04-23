@@ -3,9 +3,9 @@ Matrix Element Method for multilepton final states in High Energy Physics
 
 Authors: Nicolas Chanon (IPNL) with the help of Jing Li (PKU) and Nicolas Tonon (IPHC)
 
-# Installation (standalone)
+## Installation (standalone)
 
-## Dependencies
+### Dependencies
 
 Install and configure LHAPDF (here, on lxplus6). See http://lhapdf.hepforge.org/install.html
 
@@ -26,7 +26,7 @@ wget http://www.hepforge.org/archive/lhapdf/pdfsets/6.2/NNPDF30_lo_as_0118.tar.g
 cd ../../../
 ```
 
-## Setting up the environment
+### Setting up the environment
 
 Source LHAPDF environmental variables:
 
@@ -66,7 +66,7 @@ source /cvmfs/sft.cern.ch/lcg/external/gcc/4.9.1/x86_64-slc6/setup.sh
 source /cvmfs/sft.cern.ch/lcg/app/releases/ROOT/6.06.06/x86_64-slc6-gcc49-opt/root/bin/thisroot.sh
 ```
 
-## Building
+### Building
 
 Configure MEMmultilepton (mostly compilations)
 
@@ -76,7 +76,7 @@ cd MEMmultilepton
 ./installMEM.sh
 ```
 
-## Example run
+### Example run
 
 ```bash
 ./bin/simpleMEManalyzer ./test/config.cfg
@@ -85,7 +85,7 @@ cd MEMmultilepton
 Please use `config/config.cfg` instead of `test/config.cfg` if your interface the MEM with your own code (contains absolute path to the transfer functions and Madgraph directory)
 
 
-# Installation (CMSSW)
+## Installation (CMSSW)
 
 Here are the instruction for using library in an `fwlite` executable:
 
@@ -98,14 +98,14 @@ where `$TOPLEVEL` and `$SUBDIR` respectively refer to unique top level directory
 For instance, you could clone the package into `$CMSSW_BASE/src/analysis/MEMmultilepton`.
 The two-level directory structure is necessary for `scram` to recognize the project and build it.
 
-## Example run
+### Example run
 
 ```bash
 # can execute anywhere
 simpleMEManalyzer $CMSSW_BASE/src/analysis/MEMmultilepton/test/config.cfg
 ```
 
-## Interfacing
+### Interfacing
 
 If you want to hook this package up with your own, add the following lines to your CMSSW `BuildFile.xml`:
 ```xml
