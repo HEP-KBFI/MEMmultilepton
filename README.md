@@ -101,8 +101,8 @@ The two-level directory structure is necessary for `scram` to recognize the proj
 ### Example run
 
 ```bash
-# can execute anywhere
-simpleMEManalyzer $CMSSW_BASE/src/analysis/MEMmultilepton/test/config.cfg
+# execute in $CMSSW_BASE/src/analysis/MEMmultilepton
+simpleMEManalyzer test/config.cfg
 ```
 
 ### Interfacing
