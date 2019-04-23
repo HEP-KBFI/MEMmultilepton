@@ -82,6 +82,19 @@ cd MEMmultilepton
 ./bin/simpleMEManalyzer ./test/config.cfg
 ```
 
+Expected output:
+```
+Simple example of MEM weight computation
+-------- MEM RESULTS --------
+MEM hypothesis TTHsl weight=1e-300 kinfitscore=1e-300
+MEM hypothesis TTW weight=1.15219e-13 kinfitscore=1.76085e-16
+MEM hypothesis TTbarsl weight=3.53898e-09 kinfitscore=1.25728e-10
+MEM hypothesis THJ weight=1.17852e-13 kinfitscore=1.87691e-21
+MEM hypothesis TTH weight=1e-300 kinfitscore=1e-300
+MEM hypothesis TTbar weight=3.53898e-09 kinfitscore=1.25728e-10
+SimpleMEManalyzer: Real Time = 383.07 seconds Cpu Time = 382.81 seconds
+```
+
 Please use `config/config.cfg` instead of `test/config.cfg` if your interface the MEM with your own code (contains absolute path to the transfer functions and Madgraph directory)
 
 
@@ -103,6 +116,16 @@ The two-level directory structure is necessary for `scram` to recognize the proj
 ```bash
 # execute in $CMSSW_BASE/src/analysis/MEMmultilepton
 simpleMEManalyzer test/config.cfg
+```
+
+Expected output:
+```
+-------- MEM RESULTS --------
+MEM hypothesis TTHsl weight=1e-300 kinfitscore=1e-300
+MEM hypothesis TTbarsl weight=3.65043e-09 kinfitscore=4.15046e-11
+MEM hypothesis TTH weight=1e-300 kinfitscore=1e-300
+MEM hypothesis TTbar weight=3.65043e-09 kinfitscore=4.15046e-11
+SimpleMEManalyzer: Real Time =  28.76 seconds Cpu Time =  28.75 seconds
 ```
 
 ### Interfacing
