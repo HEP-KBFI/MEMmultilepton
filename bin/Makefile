@@ -43,8 +43,8 @@ LIBS         = ${ROOTGLIBS} ${ROOTLIBS}  -L../ -lMEMmultilepton ${LHAPDFLIB}
 all : simpleMEManalyzer
 
 clean:
-	rm *.o
-	rm simpleMEManalyzer*
+	rm -f *.o
+	rm -f simpleMEManalyzer*
 
 objects= SimpleMEManalyzer.o
 

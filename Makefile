@@ -170,8 +170,8 @@ LIBS         = ${ROOTGLIBS} ${ROOTLIBS}
 all: libMEMmultilepton.a
 
 clean:
-	rm *.o
-	rm *.a
+	rm -f *.o
+	rm -f *.a
 
 memobjects = MEPhaseSpace.o MultiLepton.o HypIntegrator.o TransferFunctions.o ParticleSelector.o Permutations.o ConfigParser.o Tools.o
 

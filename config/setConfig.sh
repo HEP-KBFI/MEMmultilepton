@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp config_template.cfg config.cfg
+cp config_template.cfg ../test/config.cfg
 cd ..
-sed -i s,MEMDIR,${PWD},g config/config.cfg
+sed -i s,MEMDIR,${PWD},g test/config.cfg
 cd -

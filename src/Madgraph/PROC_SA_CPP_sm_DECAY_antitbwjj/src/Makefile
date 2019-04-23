@@ -8,6 +8,7 @@ all: $(target)
 objects=HelAmps_sm_antitbwjj.o Parameters_sm_antitbwjj.o  ../../PROC_SA_CPP_sm_4/src/read_slha.o
 
 $(target): $(objects)
+	mkdir -p $(LIBDIR)
 	$(AR) cru $@ $(objects)
 	ranlib $(target)
 

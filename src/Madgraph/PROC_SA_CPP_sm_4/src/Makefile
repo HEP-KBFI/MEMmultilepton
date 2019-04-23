@@ -8,6 +8,7 @@ all: $(target)
 objects=HelAmps_sm.o Parameters_sm.o read_slha.o
 
 $(target): $(objects)
+	mkdir -p $(LIBDIR)
 	$(AR) cru $@ $(objects)
 	ranlib $(target)
 

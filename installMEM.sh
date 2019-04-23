@@ -10,7 +10,7 @@ make -j8
 cd config
 source setConfig.sh
 
-cd ../Examples
+cd ../bin
 make clean
 make
 
