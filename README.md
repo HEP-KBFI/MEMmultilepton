@@ -120,6 +120,7 @@ simpleMEManalyzer test/config.cfg
 
 Expected output:
 ```
+Simple example of MEM weight computation
 -------- MEM RESULTS --------
 MEM hypothesis TTHsl weight=1e-300 kinfitscore=1e-300
 MEM hypothesis TTbarsl weight=3.65043e-09 kinfitscore=4.15046e-11
