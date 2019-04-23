@@ -30,6 +30,9 @@ class CPPProcess_P0_Sigma_sm_no_b_mass_dxb_tepemux
     // Constructor.
     CPPProcess_P0_Sigma_sm_no_b_mass_dxb_tepemux() {}
 
+    // Destructor.
+    virtual ~CPPProcess_P0_Sigma_sm_no_b_mass_dxb_tepemux() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

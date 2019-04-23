@@ -28,6 +28,9 @@ class CPPProcess_P0_Sigma_sm_no_b_mass_uxbx_txhdx
     // Constructor.
     CPPProcess_P0_Sigma_sm_no_b_mass_uxbx_txhdx() {}
 
+    // Destructor.
+    virtual ~CPPProcess_P0_Sigma_sm_no_b_mass_uxbx_txhdx() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

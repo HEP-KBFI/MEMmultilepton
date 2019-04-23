@@ -271,9 +271,9 @@ void MEPhaseSpace::SetGenerator(int igen){
   return;
 }
 
-void MEPhaseSpace::SetOptimization(int iOption){
+void MEPhaseSpace::SetOptimization(int iOption_){
 
-  iOptim = iOption;
+  iOptim = iOption_;
   return;
 }
 
@@ -2131,9 +2131,6 @@ if (Top.Mag2()<0){
   
   double weight_PS1 = detJ;
 */
-
-  double gammaTop = 1.491500;
-  double gammaW = 2.047600;
   
   double weight_PS1 = BreitWigner(Top_E, mTop, gammaTop) * BreitWigner(W_E, mW, gammaW);
   //double weight_PS1 = 1/(mTop*mTop) * 1/(mW*mW);  

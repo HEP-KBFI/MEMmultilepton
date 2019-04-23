@@ -74,9 +74,9 @@ void Permutations::SetMultiLepton(MultiLepton* multilepton_, HypIntegrator* hypI
 int Permutations::InitializeHyp(HypIntegrator* hypIntegrator, int hyp, int nPointsHyp, string shyp){ 
 //, int doMinimization_, string JetChoice, int nPermutationJetSyst_){
 
-  int doMinimization = hypIntegrator->doMinimization;
+  doMinimization = hypIntegrator->doMinimization;
   string JetChoice = hypIntegrator->jetChoice;
-  int nPermutationJetSyst = hypIntegrator->nPermutationJetSyst;
+  nPermutationJetSyst = hypIntegrator->nPermutationJetSyst;
 
   if (verbosity>=1) cout << "InitializeHyp " << hyp << " (" << shyp << "), nPoints=" <<  nPointsHyp << " doMinimization="<<doMinimization<<", JetChoice=" << JetChoice << ", nsyst="<<nPermutationJetSyst<<endl;
 

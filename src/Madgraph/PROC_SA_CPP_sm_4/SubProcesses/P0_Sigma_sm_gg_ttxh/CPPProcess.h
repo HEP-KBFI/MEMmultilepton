@@ -26,7 +26,7 @@ class CPPProcess
 
     // Constructor.
     CPPProcess() {}
-    ~CPPProcess() {}
+    virtual ~CPPProcess() {}
 
     // Initialize process.
     virtual void initProc(string param_card_name); 

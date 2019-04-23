@@ -28,6 +28,9 @@ class CPPProcess_ggttll
     // Constructor.
     CPPProcess_ggttll() {}
 
+    // Destructor.
+    virtual ~CPPProcess_ggttll() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

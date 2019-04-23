@@ -28,6 +28,9 @@ class CPPProcess_P0_Sigma_sm_ckm_dcx_ttxemvex
     // Constructor.
     CPPProcess_P0_Sigma_sm_ckm_dcx_ttxemvex() {}
 
+    // Destructor.
+    virtual ~CPPProcess_P0_Sigma_sm_ckm_dcx_ttxemvex() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

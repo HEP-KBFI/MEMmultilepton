@@ -30,6 +30,9 @@ class CPPProcess_P0_Sigma_sm_gu_epvemupmumgd
     // Constructor.
     CPPProcess_P0_Sigma_sm_gu_epvemupmumgd() {}
 
+    // Destructor.
+    virtual ~CPPProcess_P0_Sigma_sm_gu_epvemupmumgd() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

@@ -223,7 +223,7 @@ void ConfigParser::GetHypotheses(int* nhyp, string** shyp, int** hyp, int** nPoi
   }
 
   if (valVerbosity>=1) {
-    for (int ih=0; ih<(*nhyp); ih++) cout << "Will run hyp "<<(*shyp)[ih]<<" code "<<(*hyp)[ih]<<" with "<<(*nPointsHyp)[ih]<<" iterations"<<endl;
+    for (int ihx=0; ihx<(*nhyp); ihx++) cout << "Will run hyp "<<(*shyp)[ihx]<<" code "<<(*hyp)[ihx]<<" with "<<(*nPointsHyp)[ihx]<<" iterations"<<endl;
   }
 
   return;

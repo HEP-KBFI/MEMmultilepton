@@ -22,7 +22,6 @@ class ConfigParser
   int nHyp;
   string* sHyp;
   int* Hyp;
-  int *index_hyp;
   
   int doTTLL, doTTHfl, doTTHsl, doTTW, doTTWJJ, doTTbarfl, doTTbarsl, doTLLJ, doWZJJ, doTHJ;
   int nPointsHypTTLL, nPointsHypTTHsl, nPointsHypTTHfl, nPointsHypTTW, nPointsHypTTWJJ, nPointsHypTTbarfl, nPointsHypTTbarsl, nPointsHypTLLJ, nPointsHypWZJJ, nPointsHypTHJ;

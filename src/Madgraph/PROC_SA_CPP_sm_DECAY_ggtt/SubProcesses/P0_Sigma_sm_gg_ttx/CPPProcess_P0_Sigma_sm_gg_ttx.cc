@@ -56,7 +56,7 @@ void CPPProcess_P0_Sigma_sm_gg_ttx::sigmaKin()
 
   // Local variables and constants
   const int ncomb = 16; 
-  static bool goodhel[ncomb] = {ncomb * false}; 
+  static bool goodhel[ncomb] = {ncomb && false}; 
   static int ntry = 0, sum_hel = 0, ngood = 0; 
   static int igood[ncomb]; 
   static int jhel; 

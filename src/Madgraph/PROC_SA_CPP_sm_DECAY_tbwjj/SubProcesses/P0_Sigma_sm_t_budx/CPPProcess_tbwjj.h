@@ -30,6 +30,9 @@ class CPPProcess_tbwjj
     // Constructor.
     CPPProcess_tbwjj() {}
 
+    // Destructor.
+    virtual ~CPPProcess_tbwjj() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

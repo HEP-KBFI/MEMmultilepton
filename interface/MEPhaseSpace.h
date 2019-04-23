@@ -11,7 +11,16 @@
 
 #include "TransferFunctions.h"
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wignored-qualifiers"
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#pragma GCC diagnostic ignored "-Wshadow"
+
 #include "LHAPDF/LHAPDF.h"
+
+#pragma GCC diagnostic pop
+
 //#include "rambo.h"
 #include "../src/Madgraph/PROC_SA_CPP_sm_4/SubProcesses/P0_Sigma_sm_gg_ttxh/CPPProcess.h"
 #include "../src/Madgraph/PROC_SA_CPP_sm_DECAY_tbwjj/SubProcesses/P0_Sigma_sm_t_budx/CPPProcess_tbwjj.h"

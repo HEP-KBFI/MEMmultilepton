@@ -30,6 +30,9 @@ class CPPProcess_P0_Sigma_sm_no_b_mass_ub_tepemd
     // Constructor.
     CPPProcess_P0_Sigma_sm_no_b_mass_ub_tepemd() {}
 
+    // Destructor.
+    virtual ~CPPProcess_P0_Sigma_sm_no_b_mass_ub_tepemd() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

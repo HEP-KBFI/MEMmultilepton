@@ -27,6 +27,9 @@ class CPPProcess_P0_Sigma_sm_gg_ttx
     // Constructor.
     CPPProcess_P0_Sigma_sm_gg_ttx() {}
 
+    // Destructor.
+    virtual ~CPPProcess_P0_Sigma_sm_gg_ttx() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 

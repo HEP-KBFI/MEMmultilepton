@@ -34,6 +34,9 @@ class CPPProcess_hw2l2nu
     // Constructor.
     CPPProcess_hw2l2nu() {}
 
+    // Destructor.
+    virtual ~CPPProcess_hw2l2nu() {}
+
     // Initialize process.
     virtual void initProc(string param_card_name); 
 
