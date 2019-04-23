@@ -9,6 +9,8 @@
 #include "../interface/Tools.h"
 #include "../interface/Permutations.h"
 
+#include <TBenchmark.h>
+
 #include <iostream>
 
 using namespace std;
@@ -67,6 +69,9 @@ int main(int argc, char *argv[])
   //nHypAllowed_TTH = 0;
   //nHypAllowed_TTbar = 0;
 
+  TBenchmark* clock = new TBenchmark();
+  clock->Start("SimpleMEManalyzer");
+
   int initresult = 0;
   for (int ih=0; ih<nhyp; ih++){ //Loop on each MEM hypothesis defined in the config
 
@@ -96,6 +101,9 @@ int main(int argc, char *argv[])
     CombineTwoHypotheses(&MEMpermutations[index_hyp[5]], index_hyp[5], &MEMpermutations[index_hyp[6]], index_hyp[6], MEMpermutationsTTbar);
     cout << "MEM hypothesis TTbar weight="<< MEMpermutationsTTbar->resMEM_avgExl0.weight<<" kinfitscore="<<MEMpermutationsTTbar->resKin_maxKinFit_Int.weight<<endl;
   }
+
+  clock->Show("SimpleMEManalyzer");
+  delete clock;
 
   return 0;
 }
