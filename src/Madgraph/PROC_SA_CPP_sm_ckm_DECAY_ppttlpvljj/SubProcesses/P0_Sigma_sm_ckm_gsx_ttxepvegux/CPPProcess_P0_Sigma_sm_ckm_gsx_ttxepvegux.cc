@@ -65,7 +65,6 @@ void CPPProcess_P0_Sigma_sm_ckm_gsx_ttxepvegux::sigmaKin()
   static int ntry = 0, sum_hel = 0, ngood = 0; 
   static int igood[ncomb]; 
   static int jhel; 
-  std::complex<double> * * wfs; 
   double t[nprocesses]; 
   // Helicities for the process
   static const int helicities[ncomb][nexternal] = {{-1, -1, -1, -1, -1, -1, -1,
@@ -297,7 +296,6 @@ double CPPProcess_P0_Sigma_sm_ckm_gsx_ttxepvegux::sigmaHat()
 void CPPProcess_P0_Sigma_sm_ckm_gsx_ttxepvegux::calculate_wavefunctions(const int perm[], const int hel[])
 {
   // Calculate wavefunctions for all processes
-  int i, j; 
 
   // Calculate all wavefunctions
   vxxxxx(p[perm[0]], mME[0], hel[0], -1, w[0]); 
@@ -488,7 +486,6 @@ double CPPProcess_P0_Sigma_sm_ckm_gsx_ttxepvegux::matrix_gsx_ttxepvegux()
 {
   int i, j; 
   // Local variables
-  const int ngraphs = 102; 
   const int ncolor = 12; 
   std::complex<double> ztemp; 
   std::complex<double> jamp[ncolor]; 
