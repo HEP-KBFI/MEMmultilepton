@@ -111,6 +111,8 @@ where `$TOPLEVEL` and `$SUBDIR` respectively refer to unique top level directory
 For instance, you could clone the package into `$CMSSW_BASE/src/analysis/MEMmultilepton`.
 The two-level directory structure is necessary for `scram` to recognize the project and build it.
 
+The package is guaranteed to work in CMSSW 10_2_X, but it very likely works in older releases as well as long as the GCC is reasonably new (4.9+).
+
 ### Example run
 
 ```bash
