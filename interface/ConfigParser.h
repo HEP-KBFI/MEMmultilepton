@@ -45,6 +45,8 @@ class ConfigParser
   void SetMadgraphDir(string);
 
   private:
+
+  static void SubstituteEnv(std::string & path);
 };
 
 #endif

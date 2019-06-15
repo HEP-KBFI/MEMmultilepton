@@ -9,6 +9,8 @@
 #include "../interface/ConfigParser.h"
 #include "../interface/MEPhaseSpace.h"
 
+#include <boost/algorithm/string.hpp>
+
 using namespace std;
 
 ConfigParser::ConfigParser(){
@@ -94,6 +96,10 @@ void ConfigParser::GetConfigFromFile(string InputFile){
   ReadOptionValue(&option, &valTFOption);
 
   fconf.close();
+
+  ConfigParser::SubstituteEnv(valMadgraphDir);
+  ConfigParser::SubstituteEnv(valTFfile);
+
   return;
 }
 
@@ -259,6 +265,36 @@ void ConfigParser::SetMadgraphDir(string MGpath){
   valMadgraphDir = MGpath;
   if (valVerbosity>=1) cout << "Using Madgraph path: "<<valMadgraphDir<<endl;
 
+  return;
+}
+
+void ConfigParser::SubstituteEnv(std::string & path)
+{
+  std::vector<std::string> path_split;
+  boost::split(path_split, path, [](char c) -> bool { return c == '/'; });
+  std::vector<std::string> path_new_vec;
+  for(const std::string & path_part: path_split)
+  {
+    if(path_part[0] == '$')
+    {
+      const char * env = std::getenv(path_part.substr(1).data());
+      if(! env)
+      {
+        assert(0);
+      }
+      path_new_vec.push_back(std::string(env));
+    }
+    else
+    {
+      path_new_vec.push_back(path_part);
+    }
+  }
+  const std::string path_new = boost::algorithm::join(path_new_vec, "/");
+  if(path != path_new)
+  {
+    std::cout << "Changing path from '" << path << "' to '" << path_new << "'\n";
+    path = path_new;
+  }
   return;
 }
 

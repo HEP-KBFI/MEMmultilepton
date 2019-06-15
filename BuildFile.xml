@@ -2,6 +2,7 @@
 <use name="root"/>
 <use name="rootmath"/>
 <use name="rootminuit2"/>
+<use name="boost" />
 <Flags LDFLAGS="-rdynamic -Wno-type-limits" />
 <Flags CXXFLAGS="-O3 -Werror -Wshadow" />
 <Flags ADD_SUBDIR="1"/>
