@@ -275,6 +275,10 @@ void ConfigParser::SubstituteEnv(std::string & path)
   std::vector<std::string> path_new_vec;
   for(const std::string & path_part: path_split)
   {
+    if(path_part.empty())
+    {
+      continue;
+    }
     if(path_part[0] == '$')
     {
       const char * env = std::getenv(path_part.substr(1).data());
