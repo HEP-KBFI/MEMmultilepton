@@ -9,7 +9,14 @@
 #include "../interface/ConfigParser.h"
 #include "../interface/MEPhaseSpace.h"
 
+#if defined(__OPTIMIZE__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#endif
 #include <boost/algorithm/string.hpp>
+#if defined(__OPTIMIZE__)
+#pragma GCC diagnostic pop
+#endif
 
 using namespace std;
 
