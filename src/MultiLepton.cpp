@@ -1412,6 +1412,10 @@ void MultiLepton::SetPresenceBandJets(MEPhaseSpace** meIntegrator, int KindTwoTo
        (*meIntegrator)->MEMFix_TopLep.isBmissing = kBjet_Present;
      }
    }
+   if (Bjets.size()==0){
+       (*meIntegrator)->MEMFix_TopHad.isBmissing = kBjet_Missing;
+       (*meIntegrator)->MEMFix_TopLep.isBmissing = kBjet_Missing;
+   }
  }
  if (KindTwoTops==1){ //Top lep, top lep
    if (Bjets.size()==2){
@@ -1427,6 +1431,10 @@ void MultiLepton::SetPresenceBandJets(MEPhaseSpace** meIntegrator, int KindTwoTo
        (*meIntegrator)->MEMFix_TopLep.isBmissing = kBjet_Missing;
        (*meIntegrator)->MEMFix_TopLep2.isBmissing = kBjet_Present;
      }
+   }
+   if (Bjets.size()==0){
+       (*meIntegrator)->MEMFix_TopLep.isBmissing = kBjet_Missing;
+       (*meIntegrator)->MEMFix_TopLep2.isBmissing = kBjet_Missing;
    }
  }
  if (KindTwoTops==-1){ //top lep, no 2nd top
