@@ -16,6 +16,7 @@ class ConfigParser
   void ReadIntegrationRange();
   void ReadJetChoice();
   void ReadOptim();
+  void SetCSVThreshold(double value);
 
   ifstream fconf;
 

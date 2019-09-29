@@ -259,6 +259,12 @@ void ConfigParser::ReadOptim(){
 
 }
 
+void ConfigParser::SetCSVThreshold(double value)
+{
+  std::cout << "Setting b-tagging WP to: " << value << '\n';
+  valCsvThresh = value;
+}
+
 void ConfigParser::SetTransferFunction(string TFpath){
 
   valTFfile = TFpath;
