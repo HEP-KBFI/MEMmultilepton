@@ -678,9 +678,17 @@ void MultiLepton::FillTTHSemiLepHyp(MEPhaseSpace** meIntegrator)
 
     int pos = 0;
     int numJet = 0;
+    ReadIntegrationBoundaries(kMEM_TTH_TopAntitopHiggsSemiLepDecay, meIntegrator);
+    std::cout << "pos = " << pos << '\n';
     AddIntegrationBound_TopLep(meIntegrator, &pos, 0, 0, (*meIntegrator)->MEMFix_TopLep.isBmissing);
+    ReadIntegrationBoundaries(kMEM_TTH_TopAntitopHiggsSemiLepDecay, meIntegrator);
+    std::cout << "pos = " << pos << '\n';
     AddIntegrationBound_TopLep(meIntegrator, &pos, 1, 1, (*meIntegrator)->MEMFix_TopLep2.isBmissing);
+    ReadIntegrationBoundaries(kMEM_TTH_TopAntitopHiggsSemiLepDecay, meIntegrator);
+    std::cout << "pos = " << pos << '\n';
     AddIntegrationBound_HiggsSemiLep(meIntegrator, &pos, &numJet, (*meIntegrator)->MEMFix_HiggsSemiLep.isJmissing);
+    ReadIntegrationBoundaries(kMEM_TTH_TopAntitopHiggsSemiLepDecay, meIntegrator);
+    std::cout << "pos = " << pos << '\n';
   }
   if ((*meIntegrator)->iNleptons==2){
 
