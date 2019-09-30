@@ -4,7 +4,7 @@
 <use name="rootminuit2"/>
 <use name="boost" />
 <Flags LDFLAGS="-rdynamic -Wno-type-limits" />
-<Flags CXXFLAGS="-Og -ggdb3 -Werror -Wshadow" />
+<Flags CXXFLAGS="-O3 -Werror -Wshadow" />
 <Flags ADD_SUBDIR="1"/>
 <export>
   <lib   name="1"/>
